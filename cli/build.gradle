@@ -18,9 +18,11 @@ dependencies {
     testImplementation "org.mockito:mockito-core:5.13.0"
 }
 
-mainClassName = 'org.openapitools.openapistylevalidator.cli.Main'
+application {
+    mainClass = 'org.openapitools.openapistylevalidator.cli.Main'
+}
 
-apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'com.gradleup.shadow'
 
 def generatedVersionDir = "${buildDir}/generated-version"
 
